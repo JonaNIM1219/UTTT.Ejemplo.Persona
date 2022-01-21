@@ -26,17 +26,6 @@ namespace UTTT.Ejemplo.Linq.Data.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=DESKTOP-4HUCUAR\\SQLEXPRESS;\ndatabase=Persona;\nIntegrated Security=SSP" +
-            "I;\npersist security info=True;")]
-        public string PersonaConnectionString {
-            get {
-                return ((string)(this["PersonaConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4HUCUAR\\SQLEXPRESS;Initial Catalog=Persona;User ID=sa;Passwor" +
             "d=PRO1010")]
         public string PersonaConnectionString1 {
@@ -53,6 +42,28 @@ namespace UTTT.Ejemplo.Linq.Data.Properties {
         public string PersonaConnectionString2 {
             get {
                 return ((string)(this["PersonaConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=DESKTOP-4HUCUAR\\SQLEXPRESS;\ndatabase=Persona;\nIntegrated Security=SSP" +
+            "I;\npersist security info=True;")]
+        public string PersonaConnectionString {
+            get {
+                return ((string)(this["PersonaConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=proyectdwp-server.database.windows.net;Initial Catalog=Persona;User I" +
+            "D=Administrador;Password=dwpproyect1!")]
+        public string PersonaConnectionString3 {
+            get {
+                return ((string)(this["PersonaConnectionString3"]));
             }
         }
     }

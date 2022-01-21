@@ -7,7 +7,7 @@
     
     <title>Ejemplo MVC </title>
     <link href="controlformato.css" type="text/css" rel="stylesheet" />
-    <script>
+   <%-- <script>
         
         function validar() {
             //obteniendo el valor que se puso en campo text del formulario
@@ -23,11 +23,12 @@
             }
             return true;
         }
-</script>
+</script>--%>
 
 </head>
 <body>
     <form id="form1" runat="server">
+    <%--<form id="form1" runat="server">
     <div>
         <div style="font-family: Andalus; background-color: #FFFF00; position: absolute; top: 15px; left: 10px; width: 77px; height: 20px;"> <asp:Label ID="Label1" runat="server" Text="Clave:"></asp:Label> </div>
        
@@ -77,6 +78,7 @@
         <br />
     
     </div>
+    </form>--%>
     </form>
 </body>
 </html>
