@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UTTT.Ejemplo.Persona {
-    
-    
-    public partial class PersonaManager {
-        
+namespace UTTT.Ejemplo.Persona
+{
+
+
+    public partial class PersonaManager
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lblAccion control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAccion;
-        
+
         /// <summary>
         /// ddlSexo control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSexo;
-        
+
         /// <summary>
         /// txtClaveUnica control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtClaveUnica;
-        
+
         /// <summary>
         /// txtNombre control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
-        
+
         /// <summary>
         /// txtAPaterno control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAPaterno;
-        
+
         /// <summary>
         /// txtAMaterno control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAMaterno;
-        
+
         /// <summary>
         /// btnAceptar control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAceptar;
-        
+
         /// <summary>
         /// btnCancelar control.
         /// </summary>
@@ -92,5 +94,23 @@ namespace UTTT.Ejemplo.Persona {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }

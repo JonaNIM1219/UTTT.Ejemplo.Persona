@@ -5,6 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="js/index.js"></script>
+    <script src="Scripts/jquery-1.4.1.js"></script>
+    <script src="Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript"  lang="js">  
+        //jQuery para solo ingresar letras
+        $(function () {
+            $("input[type=text]").keypress(function () {
+                if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122))
+                    event.returnValue = false;
+            });
+        });
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -80,6 +92,10 @@
             onclick="btnCancelar_Click" ViewStateMode="Disabled" />
     
     </div>
+
+        <asp:Button ID="Button2" runat="server" Text="Button" OnClientClick="getData();return false;" />
+        <asp:Image ID="Image1" runat="server" />
     </form>
-</body>
+   
+        </body>
 </html>
