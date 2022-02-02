@@ -20,11 +20,12 @@ namespace UTTT.Ejemplo.Persona.Control.Ctrl
                 UTTT.Ejemplo.Persona.Data.Entity.Persona persona = (UTTT.Ejemplo.Persona.Data.Entity.Persona)_o;                
                 SqlConnection conn = base.sqlConnection();
                 conn.Open();               
-                SqlCommand comm = new SqlCommand("INSERT INTO Persona (strClaveUnica,strNombre,strAPaterno,strAMaterno,idCatSexo) VALUES( '"
+                SqlCommand comm = new SqlCommand("INSERT INTO Persona (strClaveUnica,strNombre,strAPaterno,strAMaterno,strCURP,idCatSexo) VALUES( '"
                   + persona.StrClaveUnica + "','"
                  + persona.StrNombre + "','"
                  + persona.StrAPaterno + "','"
                  + persona.StrAMaterno + "','"
+                 + persona.StrCURP + "','"
                  + persona.IdCatSexo +  "')", conn);  
                 comm.ExecuteNonQuery();
                 conn.Close(); 

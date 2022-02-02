@@ -33,9 +33,6 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
     partial void InsertCatEstadoCivil(CatEstadoCivil instance);
     partial void UpdateCatEstadoCivil(CatEstadoCivil instance);
     partial void DeleteCatEstadoCivil(CatEstadoCivil instance);
-    partial void InsertUttt(Uttt instance);
-    partial void UpdateUttt(Uttt instance);
-    partial void DeleteUttt(Uttt instance);
     partial void InsertCatSexo(CatSexo instance);
     partial void UpdateCatSexo(CatSexo instance);
     partial void DeleteCatSexo(CatSexo instance);
@@ -48,6 +45,9 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
     partial void InsertUsuario(Usuario instance);
     partial void UpdateUsuario(Usuario instance);
     partial void DeleteUsuario(Usuario instance);
+    partial void InsertUttt(Uttt instance);
+    partial void UpdateUttt(Uttt instance);
+    partial void DeleteUttt(Uttt instance);
     #endregion
 		
 		public DcGeneralDataContext() : 
@@ -88,14 +88,6 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
 			}
 		}
 		
-		public System.Data.Linq.Table<Uttt> Uttt
-		{
-			get
-			{
-				return this.GetTable<Uttt>();
-			}
-		}
-		
 		public System.Data.Linq.Table<CatSexo> CatSexo
 		{
 			get
@@ -125,6 +117,14 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
 			get
 			{
 				return this.GetTable<Usuario>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Uttt> Uttt
+		{
+			get
+			{
+				return this.GetTable<Uttt>();
 			}
 		}
 	}
@@ -264,92 +264,6 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
 		{
 			this.SendPropertyChanging();
 			entity.CatEstadoCivil = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Uttt")]
-	public partial class Uttt : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _strContacto;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnstrContactoChanging(string value);
-    partial void OnstrContactoChanged();
-    #endregion
-		
-		public Uttt()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strContacto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string strContacto
-		{
-			get
-			{
-				return this._strContacto;
-			}
-			set
-			{
-				if ((this._strContacto != value))
-				{
-					this.OnstrContactoChanging(value);
-					this.SendPropertyChanging();
-					this._strContacto = value;
-					this.SendPropertyChanged("strContacto");
-					this.OnstrContactoChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -714,6 +628,8 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
 		
 		private System.Nullable<int> _idCatEstadoCivil;
 		
+		private string _strCURP;
+		
 		private EntitySet<Direccion> _Direccion;
 		
 		private EntitySet<Usuario> _Usuario;
@@ -744,6 +660,8 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
     partial void OnintNumHermanoChanged();
     partial void OnidCatEstadoCivilChanging(System.Nullable<int> value);
     partial void OnidCatEstadoCivilChanged();
+    partial void OnstrCURPChanging(string value);
+    partial void OnstrCURPChanged();
     #endregion
 		
 		public Persona()
@@ -939,6 +857,26 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
 					this._idCatEstadoCivil = value;
 					this.SendPropertyChanged("idCatEstadoCivil");
 					this.OnidCatEstadoCivilChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strCURP", DbType="VarChar(18)")]
+		public string strCURP
+		{
+			get
+			{
+				return this._strCURP;
+			}
+			set
+			{
+				if ((this._strCURP != value))
+				{
+					this.OnstrCURPChanging(value);
+					this.SendPropertyChanging();
+					this._strCURP = value;
+					this.SendPropertyChanged("strCURP");
+					this.OnstrCURPChanged();
 				}
 			}
 		}
@@ -1232,6 +1170,92 @@ namespace UTTT.Ejemplo.Linq.Data.Entity
 						this._idPersona = default(int);
 					}
 					this.SendPropertyChanged("Persona");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Uttt")]
+	public partial class Uttt : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _strContacto;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnstrContactoChanging(string value);
+    partial void OnstrContactoChanged();
+    #endregion
+		
+		public Uttt()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strContacto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string strContacto
+		{
+			get
+			{
+				return this._strContacto;
+			}
+			set
+			{
+				if ((this._strContacto != value))
+				{
+					this.OnstrContactoChanging(value);
+					this.SendPropertyChanging();
+					this._strContacto = value;
+					this.SendPropertyChanged("strContacto");
+					this.OnstrContactoChanged();
 				}
 			}
 		}

@@ -5,6 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script type="text/javascript">
+        function validaNumeros(evt){
+            var code =(evt.which) ? evt.which :evt.keyCode;
+            if(code==8){
+                return true;
+            }else if (code >= 48 && code <= 57 ){
+                return true;
+
+            }else{
+
+                return false;
+            }
+        }
+
+    </script>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,7 +58,10 @@
         
             Clave Unica:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
             <asp:TextBox ID="txtClaveUnica" runat="server" 
-                Width="249px" ViewStateMode="Disabled"></asp:TextBox>
+                Width="249px" ViewStateMode="Disabled"
+                onkeypress="return validaNumeros(event); "pattern=".{1,3}" 
+                required title="1 a 3 es la longitud que se permite ingresar"
+                OnTextChanged="txtClaveUnica"></asp:TextBox>
         
         </div>
         <div>
@@ -67,6 +87,11 @@
         
         </div>
     <div> 
+    
+        <div style="height: 24px; margin-top: 0px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CURP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtCURP" runat="server" style="margin-left: 9px; margin-bottom: 0px" Width="244px"></asp:TextBox>
+        </div>
     
     </div>
     <div>
